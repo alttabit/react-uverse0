@@ -1,18 +1,9 @@
 import React, { Suspense, useRef, useState } from "react";
-import * as THREE from "three";
-import {
-  Canvas,
-  extend,
-  useLoader,
-  useFrame,
-  useThree,
-} from "react-three-fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { FlyControls } from "three/examples/jsm/controls/FlyControls";
-import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls";
+
+import { useFrame } from "react-three-fiber";
+
 import "../styles.css";
-import { Stars, Cloud } from "drei";
+
 import Effects from "../effects/Effects";
 
 const Sun = () => {

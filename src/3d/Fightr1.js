@@ -1,20 +1,9 @@
-import React, { Suspense, useRef, useState } from "react";
-import * as THREE from "three";
-import {
-  Canvas,
-  extend,
-  useLoader,
-  useFrame,
-  useThree,
-} from "react-three-fiber";
+import React, { useRef } from "react";
+
+import { extend, useFrame, useThree } from "react-three-fiber";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { FlyControls } from "three/examples/jsm/controls/FlyControls";
-import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls";
+
 import "../styles.css";
-import { Stars } from "drei";
-import Effects from "../effects/Effects";
 
 extend({ EffectComposer });
 

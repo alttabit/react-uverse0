@@ -1,20 +1,12 @@
-import React, { Suspense, useRef, useState } from "react";
-import * as THREE from "three";
-import {
-  Canvas,
-  extend,
-  useLoader,
-  useFrame,
-  useThree,
-} from "react-three-fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import React, { Suspense, useRef } from "react";
+
+import { Canvas, extend, useFrame, useThree } from "react-three-fiber";
+
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { FlyControls } from "three/examples/jsm/controls/FlyControls";
-import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls";
+
 import "./styles.css";
-import { Stars, ContactShadows } from "drei";
+import { Stars } from "drei";
 import System1 from "./3d/System1";
-import Fightr1 from "./3d/Fightr1";
 
 extend({ OrbitControls });
 
@@ -34,7 +26,9 @@ const CameraControls = () => {
 
 function App() {
   return (
-    <Canvas camera={{ position: [0, 0, 2000], near: 0.01, far: 100000000000 }}>
+    <Canvas
+      camera={{ position: [0, 0, 100000], near: 0.01, far: 100000000000 }}
+    >
       <CameraControls />
       <group position={[0, 0, 0]}>
         <Suspense fallback={null}></Suspense>
