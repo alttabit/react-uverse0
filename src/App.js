@@ -27,7 +27,7 @@ const CameraControls = () => {
 function App() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 100000], near: 0.01, far: 100000000000 }}
+      camera={{ position: [0, 0, 10000000000], near: 0.01, far: 100000000000 }}
     >
       <CameraControls />
       <group position={[0, 0, 0]}>
