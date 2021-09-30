@@ -7,6 +7,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "./styles.css";
 import { Stars } from "drei";
 import System1 from "./3d/System1";
+import Fightr1 from "./3d/Fightr1";
 
 extend({ OrbitControls });
 
@@ -31,29 +32,18 @@ function App() {
     >
       <CameraControls />
       <group position={[0, 0, 0]}>
-        <Suspense fallback={null}></Suspense>
         <System1 />
-        <Stars
-          radius={2000} // Radius of the inner sphere (default=100)
-          depth={200} // Depth of area where stars should fit (default=50)
-          count={200} // Amount of stars (default=5000)
-          factor={2} // Size factor (default=4)
-          saturation={0} // Saturation 0-1 (default=0)
-          fade="true" // Faded dots (default=false)
-        />
       </group>
       <group position={[100000, 0, 0]}>
-        <Suspense fallback={null}></Suspense>
         <System1 />
-        <Stars
-          radius={2000} // Radius of the inner sphere (default=100)
-          depth={200} // Depth of area where stars should fit (default=50)
-          count={200} // Amount of stars (default=5000)
-          factor={2} // Size factor (default=4)
-          saturation={0} // Saturation 0-1 (default=0)
-          fade="true" // Faded dots (default=false)
-        />
       </group>
+      <group position={[200000, 0, 0]}>
+        <System1 />
+      </group>
+      <group position={[300000, 0, 0]}>
+        <System1 />
+      </group>
+
       <Stars
         radius={100000000} // Radius of the inner sphere (default=100)
         depth={2000000000} // Depth of area where stars should fit (default=50)

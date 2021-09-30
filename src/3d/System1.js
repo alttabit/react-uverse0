@@ -1,10 +1,12 @@
 import React, { Suspense, useRef, useState } from "react";
+import { Stars } from "drei";
 
 import { useFrame } from "react-three-fiber";
 
 import "../styles.css";
 
 import Effects from "../effects/Effects";
+import Fightr1 from "./Fightr1";
 
 const Sun = () => {
   const mesh = useRef();
@@ -215,6 +217,14 @@ const AsteroidBelt = () => {
 function System1() {
   return (
     <group>
+      <Stars
+        radius={2000} // Radius of the inner sphere (default=100)
+        depth={200} // Depth of area where stars should fit (default=50)
+        count={200} // Amount of stars (default=5000)
+        factor={2} // Size factor (default=4)
+        saturation={0} // Saturation 0-1 (default=0)
+        fade="true" // Faded dots (default=false)
+      />
       <Sun />
       <Planet1 />
       <Planet2 />
