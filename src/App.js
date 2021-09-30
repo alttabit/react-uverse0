@@ -37,12 +37,6 @@ function App() {
       <group position={[100000, 0, 0]}>
         <System1 />
       </group>
-      <group position={[200000, 0, 0]}>
-        <System1 />
-      </group>
-      <group position={[300000, 0, 0]}>
-        <System1 />
-      </group>
 
       <Stars
         radius={100000000} // Radius of the inner sphere (default=100)
